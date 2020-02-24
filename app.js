@@ -12,7 +12,9 @@ mongoose.connect("mongodb://localhost/snow", { useNewUrlParser: true, useUnified
 const app = express();
 
 // Middlewares
+// Setting EJS as templating engine, will have to remove this when using a front end.
 app.set("view engine", "ejs");
+// These 2 are just for using reading the request object
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
